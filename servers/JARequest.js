@@ -2,7 +2,7 @@
  * @Description: 网络请求类
  * @Author: Jamboy
  * @Date: 2022-02-22 09:15:42
- * @LastEditTime: 2022-02-22 09:58:21
+ * @LastEditTime: 2022-02-22 10:42:34
  */
 
 const BASE_URL = 'http://123.207.32.32:9001'
@@ -28,9 +28,7 @@ class JARequest {
             })
           }
         },
-        fail: function (err) {
-          reject(err)
-        }
+        fail: reject
       })
     })
   }
