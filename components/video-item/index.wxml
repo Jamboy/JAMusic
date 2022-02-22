@@ -1,0 +1,11 @@
+<!--components/video-item/index.wxml-->
+<view class="card" bindtap="onClickItem" data-id="{{item.id}}">
+  <view class="album">
+    <image src="{{item.cover}}" class="cover-img" />
+    <view class="info">
+      <view class="count">{{item.playCount}}</view>
+      <view class="duration">{{item.mv.videos[0].duration}}</view>
+    </view>
+  </view>
+  <view>{{item.name}}-{{item.artistName}}</view>
+</view>

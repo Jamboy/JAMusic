@@ -1,0 +1,26 @@
+/* components/video-item/index.wxss */
+.card {
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.album {
+  border-radius: 12rpx;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.cover-img {
+  width: 100%;
+}
+
+.info {
+  position: absolute;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
