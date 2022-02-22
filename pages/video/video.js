@@ -2,7 +2,7 @@
  * @Description: 视频
  * @Author: Jamboy
  * @Date: 2022-02-22 09:41:35
- * @LastEditTime: 2022-02-22 10:04:42
+ * @LastEditTime: 2022-02-22 18:15:01
  */
 // pages/video/video.js
 
@@ -19,12 +19,17 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-        getTopMvs(0).then(res => {
-            this.setData({ topMvs: res.data })
-        })
+    async onLoad(options) {
+        const res = await getTopMvs(0)
+        console.log('res: ', res.data[0].mv.videos[0].duration)
+        this.setData({ topMvs: res.data })
+
     },
 
+    onClickItem(e) {
+        const { id } = e.detail
+        console.log('onClickItem: ', id)
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

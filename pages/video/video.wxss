@@ -1,1 +1,9 @@
-/* pages/video/video.wxss */
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.video-card {
+  width: 48%;
+}
