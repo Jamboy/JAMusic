@@ -1,0 +1,11 @@
+<!--components/commend-video-card/index.wxml-->
+<wxs src="../../wxs/format.wxs" module="format" />
+<view class="container">
+  <view class="left">
+    <image class="img" src="{{item.al.picUrl}}" mode="widthFix" />
+  </view>
+  <view class="right">
+    <view class="name">{{item.name}}</view>
+    <view class="artist-name">{{item.ar[0].name}} - {{item.name}}</view>
+  </view>
+</view>

@@ -44,10 +44,10 @@
                 "packageJsonPath": "./package.json",
                 "miniprogramNpmDistDir": "./"
             }
-         ]
+        ]
     },
     "compileType": "miniprogram",
-    "libVersion": "2.22.0",
+    "libVersion": "2.18.0",
     "appid": "wx086b05101d323640",
     "projectname": "JAMusic",
     "debugOptions": {

@@ -1,3 +1,40 @@
 <!--pages/music/music.wxml-->
-<text>pages/music/music.wxml</text>
-<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<view class="container">
+  <van-search
+    disabled
+    background="#fafafa"
+    placeholder="搜索你喜欢的歌曲"
+    bind:click-input="handleClickSearch"
+  />
+
+  <swiper
+    style="height: {{swiperImageHeight}}px"
+    indicator-dots="{{true}}"
+    autoplay="{{true}}"
+    interval="{{5000}}"
+    duration="{{500}}"
+  >
+    <block wx:for="{{banners}}" wx:key="targetId">
+      <swiper-item>
+        <image
+          bindload="handleImageLoaded"
+          class="swiper-image"
+          id="swiper-image"
+          src="{{item.pic}}"
+          mode="widthFix"
+        />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="title-container">
+    <view class="title">歌曲推荐</view>
+    <view class="more">更多></view>
+  </view>
+
+  <view class="music-container">
+    <block wx:for="{{commendMusic}}" wx:key="id">
+      <commend-music-card item="{{item}}" />
+    </block>
+  </view>
+</view>
