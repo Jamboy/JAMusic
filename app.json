@@ -2,7 +2,8 @@
     "pages": [
         "pages/video/video",
         "pages/music/music",
-        "components/video-item/index"
+        "components/video-item/index",
+        "pages/detail-video/detail-video"
     ],
     "window": {
         "backgroundTextStyle": "light",

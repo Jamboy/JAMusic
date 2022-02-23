@@ -2,10 +2,11 @@
  * @Description: 视频
  * @Author: Jamboy
  * @Date: 2022-02-22 09:41:35
- * @LastEditTime: 2022-02-23 10:50:30
+ * @LastEditTime: 2022-02-23 11:04:55
  */
 // pages/video/video.js
 
+import { PagePath } from '../../enum/enum'
 import { getTopMvs } from '../../servers/video/api_video'
 Page({
 
@@ -40,9 +41,11 @@ Page({
         wx.hideNavigationBarLoading()
     },
 
-    onClickItem(e) {
+    onClickVideoItem(e) {
         const { id } = e.detail
-        console.log('onClickItem: ', id)
+        wx.navigateTo({
+            url: `${PagePath.VideoDetail}?id=${id}`
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
