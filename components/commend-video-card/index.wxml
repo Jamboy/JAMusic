@@ -1,0 +1,12 @@
+<!--components/commend-video-card/index.wxml-->
+<wxs src="../../wxs/format.wxs" module="format" />
+<view class="container">
+  <view class="left">
+    <image class="img" src="{{item.coverUrl}}" mode="widthFix" />
+    <view class="play-time">{{format.formatCount(item.playTime)}}</view>
+  </view>
+  <view class="right">
+    <view class="name">{{item.title}}</view>
+    <view class="artist-name">{{item.creator[0].userName}}</view>
+  </view>
+</view>
