@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "commend-video-card": "/components/commend-video-card/index"
+  }
+}
