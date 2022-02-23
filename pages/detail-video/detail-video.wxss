@@ -1,12 +1,15 @@
 /* pages/detail-video/detail-video.wxss */
 .video {
   width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .container {
   display: flex;
   align-items: flex-start;
   padding: 0 10rpx;
+  margin-top: 225px;
 }
 
 .info {

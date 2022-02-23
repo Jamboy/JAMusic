@@ -2,11 +2,11 @@
  * @Description: 视频详情页
  * @Author: Jamboy
  * @Date: 2022-02-23 11:00:43
- * @LastEditTime: 2022-02-23 13:53:56
+ * @LastEditTime: 2022-02-23 14:53:23
  */
 // pages/detail-video/detail-video.js
 
-import { getMvPlayUrl, getRelatedMv } from "../../servers/video/api_video"
+import { getMvPlayUrl, getRelatedMv, getDetailMv } from "../../servers/video/api_video"
 
 
 Page({
@@ -36,11 +36,30 @@ Page({
      */
     onLoad: async function (options) {
         const { id } = options
-        const playUrl = await getMvPlayUrl(id)
-        const relatedMv = await getRelatedMv(id)
-        this.setData({ playUrl, relatedMv })
+        this.getPageData(id)
+        // Promise.all([getMvPlayUrl(id), getRelatedMv(id), getDetailMv(id)])
+        //     .then(values => {
+        //         this.setData({ playUrl: values[0], relatedMv: values[1], detailMv: values[2] })
+        //     })
+        // const playUrl = await getMvPlayUrl(id)
+        // const relatedMv = await getRelatedMv(id)
+        // const detailMv = await getDetailMv(id)
+        // console.log('detailMv: ', detailMv)
+        // this.setData({ playUrl, relatedMv, detailMv })
     },
 
+    getPageData(id) {
+        getMvPlayUrl(id).then(res => {
+            this.setData({ playUrl: res })
+        })
+        getRelatedMv(id).then(res => {
+            this.setData({ relatedMv: res })
+
+        })
+        getDetailMv(id).then(res => {
+            this.setData({ detailMv: res })
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
