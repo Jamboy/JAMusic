@@ -2,7 +2,7 @@
 <wxs src="../../wxs//format.wxs" module="format" />
 <view class="card" bindtap="onClickItem" data-id="{{item.id}}">
   <view class="album">
-    <image src="{{item.cover}}" class="cover-img" />
+    <image src="{{item.cover}}" class="cover-img" mode="widthFix" />
     <view class="info">
       <view class="count">{{format.formatCount(item.playCount)}}</view>
       <view class="duration">{{format.formatDuration(item.mv.videos[0].duration)}}</view>
