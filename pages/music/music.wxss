@@ -1,5 +1,10 @@
 /* pages/music/music.wxss */
-.van-field__control {
+
+.van-search {
+  padding: 10rpx 0 !important;
+}
+
+.van-search__content {
   background-color: #fff !important;
 }
 
